@@ -15,6 +15,8 @@ export default function Main() {
         Sunday: new Array(24).fill(false)
     });
 
+    // Form data state for day as well as start and end see handleSubmit for business logic.
+
     const [formData, setFormData] = useState({day: 'Monday', start: 0, end: 0});
 
     const [dayOutput, setDayOutput] = useState();
@@ -35,6 +37,9 @@ export default function Main() {
         setDayData(() => ({...newDateData}));
     }, [])
 
+    /**
+     *  This use effect is to re render the dates every time the dayData state is updated the state is passed down through props.
+    */ 
     useEffect(() => {
         setDayOutput(() => {
             const newDayOutput = [];
@@ -49,7 +54,14 @@ export default function Main() {
     }, [dayData]);
 
     function handleChange(e) {
+        // Name matches the key for formData
         let key = e.target.name;
+        /** 
+         * This checks if the value being changed is start or end;
+         * if it is start the minimum value is set to 0
+         * if it is end the minimum value is set to the current start this is to prevent user from entering invalid start and finish
+         * if it is neither it is assumed that the value that needs to be changed is the select
+         */
         let value = e.target.name === 'start' ? Math.max(0, Math.min(24, Number(e.target.value))) : e.target.name === 'end' ? Math.max(formData.start, Math.min(24, Number(e.target.value))) : e.target.value;
         setFormData(prevState => {
             return {
@@ -64,14 +76,17 @@ export default function Main() {
         setDayData((prevState) => {
             let newState = {...prevState};
             newState[dayOfWeek][index] = !newState[dayOfWeek][index];
-            console.log(newState);
             return newState;
         })
     }
 
     function handleGenerateOutput(e) {
+
+        // This formats the dayData in the way that is asked. It is also in order from monday - sunday, time start - time end.
+
         e.preventDefault();
 
+        // Creates new output to be console logged.
         const output = [];
         let start;
         let end;
