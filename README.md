@@ -24,6 +24,7 @@ The time is based off of a 24 hour scale so start would be 12 end would be 24 th
 You can remove availability by clicking one of the nodes that are green. You can also individually add availability by clicking the times that are white.
 
 At the bottom there is a button that console logs the data in the format requested
+
 ie 
 `[
     {
