@@ -1,70 +1,41 @@
-# Getting Started with Create React App
+# Ethan's Availability Calendar
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## This is a simple Availability Calendar
 
-## Available Scripts
+I sent the file through email and i also uploaded it to github. If you are cloning it from github you need to run the command after cloning it.
 
-In the project directory, you can run:
+`npm install`
 
-### `npm start`
+After it is finished installing you run the following command
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+`npm start`
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+If this is to be deployed you run the following command
 
-### `npm test`
+`npm run build`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## Basic rundown of the application
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Below the header is a form that you can use to add availability. The default availability is 9am - 5pm.
+The form is built in a way that if the start time is filled out the end time cannot be lower. I added a comment in the function that does this explaining more.
+The time is based off of a 24 hour scale so start would be 12 end would be 24 this would be 12am - 12pm.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+You can remove availability by clicking one of the nodes that are green. You can also individually add availability by clicking the times that are white.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+At the bottom there is a button that console logs the data in the format requested
+ie 
+`[
+    {
+        day: 'Monday',
+        start: 11,
+        end: 17
+    }
+]`
 
-### `npm run eject`
+## Closing
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+This has been a ton of fun to write. I really enjoyed the open endedness of this challenge. I am far from a designer but given a design i have enough front end knowledge to get any kind of styling done.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Thank you very much
+Ethan Daniels

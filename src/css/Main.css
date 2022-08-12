@@ -1,0 +1,86 @@
+/* Helper classes */
+
+.btn {
+  border: none;
+  padding: 10px 8px;
+  margin-top: 10px;
+  border-radius: 4px;
+  font-size: 20px;
+}
+
+.btn-primary {
+  background-color: rgb(27, 0, 150);
+  color: white;
+}
+
+/* Form Style */
+
+.form {
+  padding: 30px 0;
+  text-align: center;
+  font-size: 20px;
+}
+
+.day-start, .day-end {
+  width: 40px;
+  font-size: 20px;
+}
+
+.day-select {
+  font-size: 20px;
+}
+
+/* Chart Style */
+
+.day-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.day {
+  width: calc(100% / 7);
+  border-right: solid 2px black;
+  text-align: center;
+}
+
+.day:last-child {
+  border-right: none;
+}
+
+.day h2 {
+  margin: 0;
+  padding: 8px 0;
+  border-bottom: solid 2px black;
+}
+
+.times {
+  display: flex;
+}
+
+.time-am, .time-pm {
+  width: 50%;
+}
+
+.time-am {
+  border-right: solid 1px black;
+}
+
+.time-am h3, .time-pm h3 {
+  margin: 0;
+  border-bottom: solid 2px black;
+}
+
+.hour {
+  border-bottom: solid black 1px;
+  height: 44px;
+}
+
+.hour:after {
+  content: "";
+  padding-bottom: 20%;
+  display: block;
+}
+
+.generate-output-wrapper {
+  text-align: center;
+}
